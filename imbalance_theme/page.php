@@ -5,7 +5,7 @@
                 <h1><?php the_title(); ?></h1>
                 <div class="article">
                       <?php the_content(); ?>
-                	  <?php edit_post_link(__('[Edit this page]'), '<br />', ''); ?>
+                	  <?php edit_post_link(__('[Edit this ]'), '<br />', ''); ?>
                 </div>
             <?php endwhile; ?>
             <?php else : ?>
