@@ -52,7 +52,7 @@
         <div id="menu">
             <div id="navicons">
                 <ul>
-                    <li><a id="subscribe" href="<?php bloginfo('rss2_url'); ?>" title="">Subscribe</a></li>
+                    <li><a id="subscribe" href="<?php bloginfo('rss2_url'); ?>" title="">Зачлени Се</a></li>
                     <li><a id="twitter" href="<?php echo get_option('imbalance_twturl'); ?>" title="">Twitter</a></li>
                     <li><a id="facebook" href="<?php echo get_option('imbalance_fbkurl'); ?>" title="">Facebook</a></li>
                 </ul>
@@ -60,15 +60,15 @@
             <div id="cats">
             	<ul>
                 	<li><a href="<?php bloginfo("url"); ?>/" title=""<?php if ( is_front_page()) { ?> class="active"<?php } ?>>Home</a></li>
-                	<li><a href="#" rel="toggle[categories]" title="">Categories</a></li>
-                	<li><a href="#" rel="toggle[archives]" title="">Archives</a></li>
+                	<li><a href="#" rel="toggle[categories]" title="">Категории</a></li>
+                	<li><a href="#" rel="toggle[archives]" title="">Архива</a></li>
                 	<?php
 				    if ( function_exists( 'wp_nav_menu' ) ) {
 				    	wp_nav_menu( array( 'theme_location' => 'custom-menu' , 'container' => '' , 'fallback_cb'=> 'custom_menu' , 'depth' => 1 ) ); }
 				    else
 					    { custom_menu(); }
 					?>
-                	<li><a href="#" rel="toggle[search]" title="">Search</a></li>
+                	<li><a href="#" rel="toggle[search]" title="">Барај</a></li>
                 </ul>
             </div>
         </div>
