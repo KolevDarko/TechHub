@@ -57,7 +57,7 @@ function imbalance_comments($comment, $args, $depth) {
           <?php printf(__('<cite class="fn">%s</cite> <span class="says">wrote:</span>'), get_comment_author_link()) ?>
       </div>
       <?php if ($comment->comment_approved == '0') : ?>
-         <em><?php _e('Your comment is awaiting moderation.') ?></em>
+         <em><?php _e('Твојот коментар треба да се одобри') ?></em>
          <br />
       <?php endif; ?>
  
@@ -124,7 +124,7 @@ function themeoptions_page()
 			
 <table width="90%" border="0">
   <tr>
-    <td valign="top" width="50%"><p><label for="custom_logo"><strong>URL to your custom logo</strong></label><br /><input type="text" name="custom_logo" id="custom_logo" size="32" value="<?php echo get_option('imbalance_custom_logo'); ?>"/></p><p><small><strong>Usage:</strong><br /><em><a href="<?php bloginfo("url"); ?>/wp-admin/media-new.php">Upload your logo</a> (461 x 70px) using WordPress Media Library and insert its URL here</em></small></p></td>
+    <td valign="top" width="50%"><p><label for="custom_logo"><strong>URL до твојто лого</strong></label><br /><input type="text" name="custom_logo" id="custom_logo" size="32" value="<?php echo get_option('imbalance_custom_logo'); ?>"/></p><p><small><strong>Usage:</strong><br /><em><a href="<?php bloginfo("url"); ?>/wp-admin/media-new.php">Upload your logo</a> (461 x 70px) using WordPress Media Library and insert its URL here</em></small></p></td>
     <td valign="top"width="50%"><p>
     	        <?php         		
 	        	ob_start();
