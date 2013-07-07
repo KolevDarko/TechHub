@@ -25,7 +25,7 @@
                       <?php the_excerpt(); ?>
                       <div class="postmetadata">
                           Posted: <?php the_time(__('F jS, Y', 'kubrick')) ?>&nbsp;&#721;&nbsp;
-                          <?php comments_popup_link(__('No Comments'), __('1 Comment'), __('% Comments'), '', __('Comments Closed') ); ?><br />
+                          <?php comments_popup_link(__('Нема Коментари'), __('1 Коментар'), __('% Коментари'), '', __('Коментарите се затворени') ); ?><br />
                           <?php printf(__('Filled under: %s'), get_the_category_list(', ')); ?>
                       </div>
                     </div>
