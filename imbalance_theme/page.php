@@ -5,11 +5,11 @@
                 <h1><?php the_title(); ?></h1>
                 <div class="article">
                       <?php the_content(); ?>
-                	  <?php edit_post_link(__('[Edit this ]'), '<br />', ''); ?>
+                	  <?php edit_post_link(__('[Промени го ова ]'), '<br />', ''); ?>
                 </div>
             <?php endwhile; ?>
             <?php else : ?>
-                <h1><?php _e("Sorry, but you are looking for something that isn&#8217;t here."); ?></h1>
+                <h1><?php _e("Нема резултати."); ?></h1>
             <?php endif; ?>
             </div>
 <?php get_footer(); ?>
