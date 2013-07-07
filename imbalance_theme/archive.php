@@ -2,17 +2,17 @@
 				  <?php /* If this is a category archive */ if (is_category()) { ?>
                     <h1><?php printf(__('Archive for the &#8216;%s&#8217; Category'), single_cat_title('', false)); ?></h1>
                   <?php /* If this is a tag archive */ } elseif( is_tag() ) { ?>
-                    <h1"><?php printf(__('Posts Tagged &#8216;%s&#8217;'), single_tag_title('', false) ); ?></h1>
+                    <h1"><?php printf(__('Постови тагирани &#8216;%s&#8217;'), single_tag_title('', false) ); ?></h1>
                   <?php /* If this is a daily archive */ } elseif (is_day()) { ?>
-                    <h1><?php printf(_c('Archive for %s|Daily archive page'), get_the_time(__('F jS, Y'))); ?></h1>
+                    <h1><?php printf(_c('Архива за %s|Дневна архива'), get_the_time(__('F jS, Y'))); ?></h1>
                   <?php /* If this is a monthly archive */ } elseif (is_month()) { ?>
-                    <h1><?php printf(_c('Archive for %s|Monthly archive page'), get_the_time(__('F, Y'))); ?></h1>
+                    <h1><?php printf(_c('Архива за %s|Месечна архива'), get_the_time(__('F, Y'))); ?></h1>
                   <?php /* If this is a yearly archive */ } elseif (is_year()) { ?>
-                    <h1><?php printf(_c('Archive for %s|Yearly archive page'), get_the_time(__('Y'))); ?></h1>
+                    <h1><?php printf(_c('Архива за %s|Годишна архива'), get_the_time(__('Y'))); ?></h1>
                   <?php /* If this is an author archive */ } elseif (is_author()) { ?>
-                    <h1><?php _e('Author Archive'); ?></h1>
+                    <h1><?php _e('Архива на авторот'); ?></h1>
                   <?php /* If this is a paged archive */ } elseif (isset($_GET['paged']) && !empty($_GET['paged'])) { ?>
-                    <h1><?php _e('Blog Archives'); ?></h1>
+                    <h1><?php _e('Архива на TechHub'); ?></h1>
                   <?php } ?>
 
               <ul class="mcol">
@@ -39,7 +39,7 @@
                       <?php the_excerpt(); ?>
                       <div class="postmetadata">
                           Posted: <?php the_time(__('F jS, Y', 'kubrick')) ?>&nbsp;&#721;&nbsp;
-                          <?php comments_popup_link(__('No Comments'), __('1 Comment'), __('% Comments'), '', __('Comments Closed') ); ?><br />
+                          <?php comments_popup_link(__('Нема Коментари'), __('1 Коментар'), __('% Коментари'), '', __('Забранети Коментари') ); ?><br />
                           <?php printf(__('Filled under: %s'), get_the_category_list(', ')); ?>
                       </div>
                     </div>
@@ -54,7 +54,7 @@
             <?php if(have_posts()) : ?><?php while(have_posts()) : the_post(); ?>
             <?php endwhile; ?>
             <?php else : ?>
-                <h1 id="error"><?php _e("Sorry, but you are looking for something that isn&#8217;t here."); ?></h1>
+                <h1 id="error"><?php _e("Нема резултати."); ?></h1>
             <?php endif; ?>
 
 
