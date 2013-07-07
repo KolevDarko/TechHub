@@ -4,11 +4,11 @@
               <?php if(have_posts()) : ?><?php while(have_posts()) : the_post(); ?>
 				<div class="entry">
                 <div class="postmetadata">
-                    <?php previous_post_link('%link', '&larr; Back to article<br />&nbsp;<br />'); ?>
+                    <?php previous_post_link('%link', '&larr; Назад до текстот<br />&nbsp;<br />'); ?>
                 	<span>Published by</span> <?php the_author() ?><br />
                     <?php printf(__('<span>Filled under:</span> %s'), get_the_category_list(', ')); ?><br />
-					<?php comments_popup_link(__('No Comments'), __('1 Comment'), __('% Comments'), '', __('Comments Closed') ); ?><br />
-					<?php edit_post_link(__('Edit this image'), '<br />', ''); ?>
+					<?php comments_popup_link(__('Нема коментари'), __('1 Коментар'), __('% Коментари'), '', __('Comments Closed') ); ?><br />
+					<?php edit_post_link(__('Промени ја сликата'), '<br />', ''); ?>
                     
                 </div>
                 <h1><?php the_title(); ?></h1>
@@ -57,7 +57,7 @@
                 </div>
             <?php endwhile; ?>
             <?php else : ?>
-                <h1 id="error"><?php _e("Sorry, but you are looking for something that isn&#8217;t here."); ?></h1>
+                <h1 id="error"><?php _e("Нема резултати"); ?></h1>
             <?php endif; ?>
             </div>         
             </div>
