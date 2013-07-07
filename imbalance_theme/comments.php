@@ -9,7 +9,7 @@
 		die ('Please do not load this page directly. Thanks!');
 	
 	if ( post_password_required() ) { ?>
-		<p class="nocomments"><?php _e('This post is password protected. Enter the password to view comments.'); ?></p> 
+		<p class="nocomments"><?php _e('Внеси лозинка за да ги видеш коментарите.'); ?></p> 
 	<?php
 		return;
 	}
@@ -19,7 +19,7 @@
 
 <?php if ( have_comments() ) : ?>
     <a name="comments"></a>
-	<h3><?php comments_number(__('No Comments'), __('One Comment'), __('% Comments'));?></h3>
+	<h3><?php comments_number(__('Нема Коментари'), __('1 Коментар'), __('% Коментари'));?></h3>
 
 	<div class="navigation">
 		<div class="alignleft"><?php previous_comments_link() ?></div>
@@ -46,7 +46,7 @@
 
 	 <?php else : // comments are closed ?>
 		<!-- If comments are closed. -->
-		<p class="nocomments"><?php _e('Comments are closed.'); ?></p>
+		<p class="nocomments"><?php _e('Коментарите се затворени.'); ?></p>
 
 	<?php endif; ?>
 <?php endif; ?>
@@ -59,21 +59,21 @@
 
 <?php if ( is_user_logged_in() ) : ?>
 
-<div class="login"><?php printf(__('Logged in as <a href="%1$s">%2$s</a>.'), get_option('siteurl') . '/wp-admin/profile.php', $user_identity); ?> <a href="<?php echo wp_logout_url(get_permalink()); ?>" title="<?php _e('Log out of this account'); ?>"><?php _e('Log out &raquo;'); ?></a></div>
+<div class="login"><?php printf(__('Најави се како <a href="%1$s">%2$s</a>.'), get_option('siteurl') . '/wp-admin/profile.php', $user_identity); ?> <a href="<?php echo wp_logout_url(get_permalink()); ?>" title="<?php _e('Одјави се од овој корисник'); ?>"><?php _e('Одјави се &raquo;'); ?></a></div>
 
 <?php endif; ?>
 
 
 
 
-<h3 class="comments2"><?php comment_form_title( __('Leave a Reply'), __('Leave a Reply for %s' ) ); ?></h3>
+<h3 class="comments2"><?php comment_form_title( __('Одговори'), __('Одговори за %s' ) ); ?></h3>
 
 <div id="cancel-comment-reply"> 
 	<small><?php cancel_comment_reply_link() ?></small>
 </div> 
 
 <?php if ( get_option('comment_registration') && !is_user_logged_in() ) : ?>
-<p><?php printf(__('You must be <a href="%s">logged in</a> to post a comment.'), wp_login_url( get_permalink() )); ?></p>
+<p><?php printf(__('Мора да си <a href="%s">најавен</a> за да коментираш.'), wp_login_url( get_permalink() )); ?></p>
 <?php else : ?>
 
 <form action="<?php echo get_option('siteurl'); ?>/wp-comments-post.php" method="post" id="commentform">
