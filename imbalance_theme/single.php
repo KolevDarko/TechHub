@@ -4,7 +4,7 @@
               <?php if(have_posts()) : ?><?php while(have_posts()) : the_post(); ?>
 				<div class="entry">
                 <div class="postmetadata">
-                    <span>Published by</span> <?php the_author() ?><br />
+                    <span>Автор:</span> <?php the_author() ?><br />
                     <?php printf(__('<span>Категории:</span> %s'), get_the_category_list(', ')); ?><br />
 					<?php comments_popup_link(__('Нема Коментари'), __('1 Коментар'), __('% Коментари'), '', __('Коментарите се затворени') ); ?><br />
                     <?php edit_post_link(__('[Промени]'), '<br />', ''); ?>
