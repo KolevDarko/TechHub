@@ -6,7 +6,7 @@ Template Name: Search Page
 <?php get_header(); ?> 
 
             <div id="main">
-                <h1>Search</h1>
+                <h1>Барај</h1>
                 <div class="article">
 <?php include (TEMPLATEPATH . '/searchform.php'); ?>                
                 </div>
