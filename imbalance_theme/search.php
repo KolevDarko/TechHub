@@ -1,5 +1,5 @@
 <?php get_header(); ?> 
-              <h1>Search Result for <?php /* Search Count */ $allsearch = &new WP_Query("s=$s&showposts=-1"); $key = wp_specialchars($s, 1); $count = $allsearch->post_count; _e(''); _e('&#8220;'); echo $key; _e('&#8221;'); _e(' &mdash; '); echo $count . ' '; _e('articles'); wp_reset_query(); ?></h1>
+              <h1>Резултати од пребарувањето на <?php /* Search Count */ $allsearch = &new WP_Query("s=$s&showposts=-1"); $key = wp_specialchars($s, 1); $count = $allsearch->post_count; _e(''); _e('&#8220;'); echo $key; _e('&#8221;'); _e(' &mdash; '); echo $count . ' '; _e('articles'); wp_reset_query(); ?></h1>
 
 
               <ul class="mcol">
@@ -26,7 +26,7 @@
                       <div class="postmetadata">
                           Posted: <?php the_time(__('F jS, Y', 'kubrick')) ?>&nbsp;&#721;&nbsp;
                           <?php comments_popup_link(__('Нема Коментари'), __('1 Коментар'), __('% Коментари'), '', __('Коментарите се затворени') ); ?><br />
-                          <?php printf(__('Filled under: %s'), get_the_category_list(', ')); ?>
+                          <?php printf(__('Категирија: %s'), get_the_category_list(', ')); ?>
                       </div>
                     </div>
                 </li> <?php ?>
